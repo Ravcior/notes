@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Noter.js</title>
+</head>
+<body class="bg-light">
+    <div class="container">
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="note-icon.png" alt="" width="80" height="80">
+            <h2>Noter.js</h2>
+            <p class="lead">Od teraz wszystkie twoje najważniejsze rzeczy w jednym miejscu! Pozbędziesz się koszmaru karteczek na lodówce i o niczym nie zapomnisz. Aplikacja Noter.js będzie zawsze przy tobie, w Twoim telefonie lub na komputerze!</p>
+        </div>
+
+         <div class="row">
+            <div class="col-xl-4 order-md-2 mb-4">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted">Opis projektu</span>
+                </h4>
+                <div class="card"">
+                    <div class="card-body text-muted">
+                        <h6>Funkcje:</h6>
+                        <ul>
+                           <li>Dodawanie i usuwanie notatek</li>
+                           <li>Możliwość określenia priorytetu</li>
+                           <li>Automatyczna data dodania</li>
+                           <li>Sortowanie notatek</li>
+                           <li>Wyszukiwanie notatek</li>
+                           <li><del>Zapis notatek w API</del></li>
+                        </ul>
+                        <h6>Opis</h6>
+                        <p>Aplikacja <b>Noter.js</b> pełni zadanie miejsca gdzie możemy zapisać swoje przemyślenia, przypominajki czy zaplanowane obowiązki. Struktura strony została oparta o <b>Bootstrap</b> i jest w pełni <b>responsywna</b>. Interaktywność dodałem za pomocą <b>Javascript</b>'u, w zgodności ze standardem <b>ES6</b>.</p>
+                        <p>Zobacz cały kod na: <a href="">GitHub</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-8 order-md-1">
+                <h4 class="mb-3">Dodaj notatkę</h4>
+                <form class="needs-validation" id="addForm" novalidate>
+                    <div class="row">
+                        <div class="col-md-9 mb-3">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" id="title" placeholder="Give the title">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="importance">Importance</label>
+                            <select class="custom-select" id="importance" aria-label="Wybierz priorytet">
+                                <option value="1">High</option>
+                                <option selected value="2">Normal</option>
+                                <option value="3">Low</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="content">Content</label>
+                            <textarea class="form-control" id="content" rows="10" aria-label="With textarea" placeholder="What do you think now?"></textarea>
+                        </div>
+                    </div>
+                    <button class="btn btn-dark btn-lg btn-block" id="submit" type="submit">Add note</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 order-md-2 mb-4">
+                <form class="card p-2">
+                    <div class="input-group">
+                        <label for="state">Sortuj</label>
+                        <select class="custom-select d-block w-100" id="state" required>
+                            <option selected value="1">Od najnowszych</option>
+                            <option value="2">Od najstarszych</option>
+                            <option value="3">Alfabetycznie</option>
+                            <option value="4">Od najważniejszych</option>
+                            <option value="5">Od najmniej ważnych</option>
+                        </select>
+                    </div>
+                </form>
+                <form class="card p-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="search" placeholder="Wyszukaj...">
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-8 mb-4" id="list">
+            </div>
+        </div>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">&copy; Rafał Rozkowiński</p>
+        </footer>
+    </div>
+
+<script src="main.js"></script>
+</body>
+</html>
