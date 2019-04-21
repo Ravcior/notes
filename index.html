@@ -7,13 +7,13 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Noter.js</title>
 </head>
 <body class="bg-light">
     <div class="container">
         <div class="py-5 text-center">
-            <img class="d-block mx-auto mb-4" src="note-icon.png" alt="" width="80" height="80">
+            <img class="d-block mx-auto mb-4" src="img/icon.png" alt="" width="80" height="80">
             <h2>Noter.js</h2>
             <p class="lead">Od teraz wszystkie twoje najważniejsze rzeczy w jednym miejscu! Pozbędziesz się koszmaru karteczek na lodówce i o niczym nie zapomnisz. Aplikacja Noter.js będzie zawsze przy tobie, w Twoim telefonie lub na komputerze!</p>
         </div>
@@ -35,8 +35,8 @@
                            <li><del>Zapis notatek w API</del></li>
                         </ul>
                         <h6>Opis</h6>
-                        <p>Aplikacja <b>Noter.js</b> pełni zadanie miejsca gdzie możemy zapisać swoje przemyślenia, przypominajki czy zaplanowane obowiązki. Struktura strony została oparta o <b>Bootstrap</b> i jest w pełni <b>responsywna</b>. Interaktywność dodałem za pomocą <b>Javascript</b>'u, w zgodności ze standardem <b>ES6</b>.</p>
-                        <p>Zobacz cały kod na: <a href="">GitHub</a></p>
+                        <p>Aplikacja <b>Noter.js</b> pełni zadanie miejsca gdzie możemy zapisać swoje przemyślenia, przypominajki czy zaplanowane obowiązki. Struktura strony została oparta o <b>Bootstrap</b> i jest w pełni <b>responsywna</b>. Interaktywność dodałem za pomocą <b>Javascript</b>'u.</p>
+                        <p>Zobacz cały kod na: <a href="https://github.com/Ravcior/notes">GitHub</a></p>
                     </div>
                 </div>
             </div>
@@ -45,23 +45,23 @@
                 <form class="needs-validation" id="addForm" novalidate>
                     <div class="row">
                         <div class="col-md-9 mb-3">
-                            <label for="title">Title</label>
-                            <input type="text" class="form-control" id="title" placeholder="Give the title">
+                            <label for="title">Tytuł</label>
+                            <input type="text" class="form-control" id="title" placeholder="Wpisz tytuł...">
                         </div>
                         <div class="col-md-3 mb-3">
-                            <label for="importance">Importance</label>
+                            <label for="importance">Priorytet</label>
                             <select class="custom-select" id="importance" aria-label="Wybierz priorytet">
-                                <option value="1">High</option>
-                                <option selected value="2">Normal</option>
-                                <option value="3">Low</option>
+                                <option value="1">Bardzo ważne</option>
+                                <option selected value="2">Ważne</option>
+                                <option value="3">Mało ważne</option>
                             </select>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <label for="content">Content</label>
-                            <textarea class="form-control" id="content" rows="10" aria-label="With textarea" placeholder="What do you think now?"></textarea>
+                            <label for="content">Treść</label>
+                            <textarea class="form-control" id="content" rows="10" aria-label="With textarea" placeholder="Treść notatki..."></textarea>
                         </div>
                     </div>
-                    <button class="btn btn-dark btn-lg btn-block" id="submit" type="submit">Add note</button>
+                    <button class="btn btn-dark btn-lg btn-block" id="submit" type="submit">Dodaj</button>
                 </form>
             </div>
         </div>
@@ -89,11 +89,18 @@
             </div>
         </div>
 
-        <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p class="mb-1">&copy; Rafał Rozkowiński</p>
-        </footer>
+        <footer class="mt-5 text-muted text-center text-small">
+         <p class="mb-0">
+            Created by:
+            <a href="https://github.com/Ravcior">Rafał Rozkowiński</a>
+         </p>
+         <p class="mb-1">
+            Full code available on:
+            <a href="https://github.com/Ravcior/notes">GitHub</a>
+         </p>
+      </footer>
     </div>
 
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

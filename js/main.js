@@ -48,7 +48,7 @@ function prepareHTML(note) {
    <div class="card-body">
    ${note.content}
    </div>
-   <div class="card-footer">Created: ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()} ${time.getDay()}.${time.getMonth() +
+   <div class="card-footer">Data dodania: ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()} ${time.getDay()}.${time.getMonth() +
          1}.${time.getFullYear()}</div>
    </div>`;
    return note;
